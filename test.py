@@ -14,8 +14,8 @@ CIRCUIT = '''  ---> [Current 1]     ---> [Current 3]
 '''
 
 def random_number(value):
-    if value == "voltage": return randint(30,50)
-    elif value == "resistance": return randint(5,10)
+    if value == "voltage": return float(randint(30,50))
+    elif value == "resistance": return float(randint(5,10))
     else: return None
 
 def fill_data_questions():
@@ -58,7 +58,7 @@ def display_circuit():
 
 fill_data_questions()
 display_circuit()
-print(GIVEN_QUESTIONS)
+# print(GIVEN_QUESTIONS)
 quiz_is_starting = True
 while quiz_is_starting:
     # Solve for Current 1
